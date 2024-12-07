@@ -1,0 +1,442 @@
+*{
+	cursor: url('../media/image/cursor.png'), auto;
+	scroll-behavior: smooth;
+}
+
+*::selection {
+	background: cyan;
+	color: blue;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 172;
+  font-style: normal;
+
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+	color: black;
+}
+
+.holder {
+	margin-bottom: 25px;
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	letter-spacing: -1px;
+}
+
+h2 {
+	font-size: 150%;
+}
+
+p {
+	font-size: 75%;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.backgroundblue {
+	background: #dfffff;
+}
+
+/*loading cube animation*/
+
+#loading {
+  position: sticky;
+  top: 0px;
+  z-index: 500;
+  width: 99vw;
+  height: 101vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading h2 {
+	z-index: 1000;
+}
+
+#loading .scene {
+	transform: scale(0.5);
+	position: absolute;
+	top: 0;
+	margin: 0 auto;
+	height: 100vh;
+	width: 200px;
+	height: 200px;
+	perspective: 600px;
+}
+
+#loading .cube {
+	margin-top: 100px;
+	animation: rotate 10s infinite linear forwards;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+}
+
+#loading .cube_face {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-size: 200%;
+	border: 2px solid black;
+}
+
+#loading .cube_face_front {
+	transform: rotateY(0deg) translateZ(100px);
+	background: rgba(255, 0, 0, 0.7); 
+}
+
+#loading .cube_face_right {
+	transform: rotateY(90deg) translateZ(100px);
+	background: rgba(0, 255, 0, 0.7);
+}
+
+#loading .cube_face_back {
+	transform: rotateY(180deg) translateZ(100px);
+	background: rgba(0, 0, 255, 0.7);
+}
+
+#loading .cube_face_left {
+	transform: rotateY(-90deg) translateZ(100px);
+	background: rgba(0, 255, 255, 0.7);
+}
+
+#loading .cube_face_top {
+	transform: rotateX(90deg) translateZ(100px);
+	background: rgba(255, 255, 0, 0.7);
+}
+
+#loading .cube_face_bottom {
+	transform: rotateX(-90deg) translateZ(100px);
+	background: rgba(255, 0, 255, 0.7);
+}
+
+
+
+
+#nav {
+	height: 75px;
+	position: sticky;
+	top: 0;
+	background: white;
+	color: black;
+	width: 98vw;
+	z-index: 100;
+	display: grid;
+	grid-template-columns: 3fr 3fr 3fr;
+	place-items: center;
+}
+
+#nav h1 {
+	text-align: left;
+}
+
+#menu {
+	position: absolute;
+	top: 30%;
+	right: 5%;
+	height: 50px;
+}
+
+#menu p {
+	cursor: pointer;
+	text-decoration: none;
+	margin: 10px 0px 10px 0px;
+}
+
+#menu p:hover {
+	background: #60ffff;
+}
+
+#menu div {
+	cursor: pointer;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	display: none;
+}
+
+#menu:hover div {
+	font-size: 120%;
+	text-align: center;
+	display: block;
+	background: #9fffff;
+	width: 110px;
+}
+
+#menu img {
+	background-repeat: no-repeat;
+	width: 60%;
+	height: 60%;
+}
+
+#contact {
+	height: 100%;
+	font-size: 150%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#contact p {
+	margin-top: 10%;
+	text-align: center;
+}
+
+#contact p:hover {
+	text-decoration: underline;
+}
+
+#image {
+	position: absolute;
+	right: 20px;
+	height: 50px;
+}
+
+video {
+	cursor: pointer;
+}
+
+#top {
+	scroll-margin-top: 100px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#frames {
+	margin-left: 2vw;
+	margin-right: 2vw;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+#frames video {
+	width: 20vw;
+	margin: 10px;
+	cursor: pointer;
+}
+
+#frames video:hover {
+	-webkit-box-shadow: 0px 0px 5px blue;
+	-moz-box-shadow: 0px 0px 5px blue;
+	-ms-box-shadow: 0px 0px 5px blue;
+	-o-box-shadow: 0px 0px 5px blue;
+	box-shadow: 0px 0px 5px blue;
+}
+
+#mh {
+	height: 50vw;
+	display: grid;
+	place-items: center;
+}
+
+#main {
+	width: 70vw;
+}
+
+#audio {
+	display: flex;
+	justify-content: center;
+}
+
+#audio div {
+	width: 40vw;
+	display: grid;
+	place-items: center;
+}
+
+#audio .download {
+	width: 100px;
+	height: 50px;
+	border-radius: 1000px;
+	background: white;
+	border: 1px solid black;
+	color: black;
+	margin: 20px;
+}
+
+#audio .download:hover {
+	color: blue;
+	border: 3px solid blue;
+}
+
+#audio .demo {
+	width: 20vw;
+	margin: 20px;
+}
+
+#audio .play {
+	cursor: pointer;
+	width: 8vw;
+	height: auto;
+}
+
+#demoreelstext {
+	scroll-margin-top: 100px;
+	margin-top: 100px;
+}
+
+#requestaudio {
+	margin: 20px;
+	cursor: pointer;
+	width: 30vw;
+	font-size: 100%;
+	border-radius: 1000px;
+	background: #ffffff;
+	border: 1px solid black;
+}
+
+#requestaudio:hover{
+	border: 1px solid blue;
+	color: blue;
+}
+
+
+#happycustomers {
+	width: 80vw;
+	display: grid;
+	grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+	grid-template-rows: 4fr 4fr 4fr 4fr;
+	place-items: center;
+}
+
+#happycustomerstext{
+	scroll-margin-top: 100px;
+}
+
+#happycustomers img {
+	width: 13vw;
+	margin: 5%;
+}
+
+#happycustomers p {
+	font-size: 150%;
+}
+
+#studioinfo {
+	padding: 20px;
+}
+
+#studioinfo p {
+	text-align: center;
+	font-size: 100%;
+}
+
+#studioinfotext {
+	margin-bottom: 0px;
+	scroll-margin-top: 100px;
+}
+
+#langchange {
+	position: absolute;
+	right: 25%;
+	appearance: none;
+	border-radius: 100px;
+	width: 10vw;
+	height: 50px;
+	text-align: center;
+	background: white;
+	border: 1px solid blue;
+}
+
+#langchange:focus {
+	border: 1px solid blue;
+	outline: none;
+}
+
+#linkedin {
+	cursor: pointer;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#linkedin img {
+	cursor: pointer;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateY(0deg) rotateX(0deg);
+	}
+	100% {
+		transform: rotateX(360deg) rotateY(-360deg);
+	}
+}
+
+@media screen and (max-width: 400px) {
+	h3 {
+		font-size: 100%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	h1 {
+		font-size: 90%;
+	}
+}
+
+@media screen and (max-width: 333px) {
+	#audio h3 {
+		font-size: 50%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#requestaudio {
+		font-size: 70%;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#requestaudio {
+		font-size: 50%;
+	}
+}
+
+@media screen and (max-width: 476px) {
+	#contact {
+		font-size: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
