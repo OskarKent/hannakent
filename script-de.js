@@ -77,11 +77,11 @@ button.forEach((image, index) => {
 	image.addEventListener("click", () => {
 		if (playing === false) {			
 			audio[index].play()
-			button[index].src = "../media/image/pause-button.png"
+			image.src = "../media/image/pause-button.png"
 			playing = true
 		} else if (playing === true) {
 			audio[index].pause()
-			button[index].src = "../media/image/play-button.png"
+			image.src = "../media/image/play-button.png"
 			playing = false
 		}
 	})
@@ -90,28 +90,6 @@ button.forEach((image, index) => {
 
 
 
-
-
-// for nav
-
-const select = document.querySelector('select');
-
-const teleport = (id) => {
-	id.scrollIntoView({behavior: "smooth"})
-}
-
-select.addEventListener("input", () => {
-	let v = select.value;
-	if (v === "Videos") {		
-		teleport(document.getElementById('top'))
-	} else if (v === "Demos") {
-		teleport(document.getElementById('demoreelstext'))
-	} else if (v === "Zufriedene Kunden") {
-		teleport(document.getElementById('happycustomerstext'))
-	} else if (v === "Studio") {
-		teleport(document.getElementById('studioinfotext'))
-	}
-})
 
 
 

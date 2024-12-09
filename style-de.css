@@ -262,39 +262,20 @@ video {
 }
 
 #audio {
+	text-align: center;
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
-#audio div {
-	width: 40vw;
-	display: grid;
-	place-items: center;
-}
-
-#audio .download {
-	width: 100px;
-	height: 50px;
-	border-radius: 1000px;
-	background: white;
-	border: 1px solid black;
-	color: black;
-	margin: 20px;
-}
-
-#audio .download:hover {
-	color: blue;
-	border: 3px solid blue;
-}
-
-#audio .demo {
-	width: 20vw;
-	margin: 20px;
+.demo {
+	border: 1px solid #000000b3;
+	width: 30vw;
 }
 
 #audio .play {
 	cursor: pointer;
-	width: 8vw;
+	width: 10vw;
 	height: auto;
 }
 
