@@ -219,6 +219,7 @@ a:hover {
 }
 
 video {
+	display: block;
 	cursor: pointer;
 }
 

@@ -16,8 +16,10 @@ const videoeffects = () => {
 
 	// makes options videos look better
 	const changeTime = () => {
+		main.currentTime += 0.1;
 		frame[0].currentTime += 10.5;
-		frame[2].currentTime += 35;
+		frame[1].currentTime += 0.1
+		frame[2].currentTime += 0.1;
 		frame[3].currentTime += 12;
 	}
 
