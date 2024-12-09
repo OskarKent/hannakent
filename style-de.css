@@ -263,19 +263,21 @@ video {
 
 #audio {
 	text-align: center;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 4fr 4fr 4fr 4fr;
 }
 
 .demo {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 	border: 1px solid #000000b3;
-	width: 30vw;
+	width: auto;
 }
 
 #audio .play {
 	cursor: pointer;
-	width: 10vw;
+	width: 50px;
 	height: auto;
 }
 
