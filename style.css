@@ -301,7 +301,6 @@ video {
 
 #demoreelstext {
 	scroll-margin-top: 100px;
-	margin-top: 100px;
 }
 
 #requestaudio {
@@ -326,6 +325,7 @@ video {
 	grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
 	grid-template-rows: 4fr 4fr 4fr 4fr;
 	place-items: center;
+	margin-bottom: 50px;
 }
 
 #happycustomerstext{
