@@ -269,8 +269,10 @@ video {
 }
 
 .demo {
-	display: flex;
-	align-items: center;
+	display: grid;
+	place-items: center;
+	height: 170px;
+	grid-template-rows: 1fr auto;
 	flex-direction: column;
 	border: 1px solid #000000b3;
 	width: auto;
