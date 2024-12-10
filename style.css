@@ -176,7 +176,7 @@ a:hover {
 #menu div {
 	cursor: pointer;
 	position: absolute;
-	top: 50px;
+	top: 30px;
 	right: 0px;
 	display: none;
 }
@@ -231,8 +231,8 @@ video {
 }
 
 #frames {
-	margin-left: 2vw;
-	margin-right: 2vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -424,8 +424,10 @@ video {
 @media screen and (max-width: 476px) {
 	#contact {
 		font-size: 100%;
+		margin-top: 30%;
 	}
 }
+
 
 
 

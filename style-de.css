@@ -145,7 +145,7 @@ a:hover {
 	top: 0;
 	background: white;
 	color: black;
-	width: 98vw;
+	width: 101vw;
 	z-index: 100;
 	display: grid;
 	grid-template-columns: 3fr 3fr 3fr;
@@ -176,7 +176,7 @@ a:hover {
 #menu div {
 	cursor: pointer;
 	position: absolute;
-	top: 50px;
+	top: 30px;
 	right: 0px;
 	display: none;
 }
@@ -196,6 +196,7 @@ a:hover {
 }
 
 #contact {
+	margin-top: 10%;
 	height: 100%;
 	font-size: 150%;
 	display: flex;
@@ -230,8 +231,8 @@ video {
 }
 
 #frames {
-	margin-left: 2vw;
-	margin-right: 2vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -379,7 +380,7 @@ video {
 	}
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 745px) {
 	h1 {
 		font-size: 90%;
 	}
@@ -406,9 +407,9 @@ video {
 @media screen and (max-width: 476px) {
 	#contact {
 		font-size: 100%;
+		margin-top: 30%;
 	}
 }
-
 
 
 
