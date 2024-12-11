@@ -401,6 +401,16 @@ video {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	#menu:focus div {
+		font-size: 120%;
+		text-align: center;
+		display: block;
+		background: #9fffff;
+		width: 110px;
+	}
+}
+
 @media screen and (max-width: 400px) {
 	h3 {
 		font-size: 100%;
