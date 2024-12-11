@@ -52,6 +52,7 @@ a:hover {
 }
 
 .backgroundblue {
+	width: 100vw;
 	background: #dfffff;
 }
 
@@ -145,7 +146,7 @@ a:hover {
 	top: 0;
 	background: white;
 	color: black;
-	width: 98vw;
+	width: 100vw;
 	z-index: 100;
 	display: grid;
 	grid-template-columns: 3fr 3fr 3fr;
@@ -159,7 +160,7 @@ a:hover {
 #menu {
 	position: absolute;
 	top: 30%;
-	right: 5%;
+	right: 1%;
 	height: 50px;
 }
 
@@ -263,19 +264,27 @@ video {
 }
 
 #audio {
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 }
 
 #audio div {
+	text-align: center;
 	width: 40vw;
 	display: grid;
 	place-items: center;
 }
 
+#audio h3 {
+	font-size: 90%;
+}
+
 #audio .download {
-	width: 100px;
-	height: 50px;
+	width: 75px;
+	height: 10vw;
+	max-height: 50px;
+	font-size: 80%;
 	border-radius: 1000px;
 	background: white;
 	border: 1px solid black;
@@ -307,6 +316,7 @@ video {
 	margin: 20px;
 	cursor: pointer;
 	width: 20vw;
+	min-width: 120px;
 	font-size: 100%;
 	border-radius: 1000px;
 	background: #ffffff;
@@ -320,12 +330,12 @@ video {
 
 
 #happycustomers {
+	padding-bottom: 50px;
 	width: 80vw;
 	display: grid;
 	grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
 	grid-template-rows: 4fr 4fr 4fr 4fr;
 	place-items: center;
-	margin-bottom: 50px;
 }
 
 #happycustomerstext{

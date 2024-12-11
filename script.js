@@ -21,6 +21,7 @@ const videoeffects = () => {
 		frame[1].currentTime += 0.1
 		frame[2].currentTime += 0.1;
 		frame[3].currentTime += 12;
+		main.currentTime += 0.1;
 	}
 
 	// changes main video

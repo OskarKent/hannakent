@@ -52,6 +52,7 @@ a:hover {
 }
 
 .backgroundblue {
+	width: 100vw;
 	background: #dfffff;
 }
 
@@ -145,7 +146,7 @@ a:hover {
 	top: 0;
 	background: white;
 	color: black;
-	width: 101vw;
+	width: 100vw;
 	z-index: 100;
 	display: grid;
 	grid-template-columns: 3fr 3fr 3fr;
@@ -263,19 +264,35 @@ video {
 }
 
 #audio {
+	width: 100vw;
+	padding-bottom: 50px;
 	text-align: center;
 	display: grid;
 	grid-template-columns: 4fr 4fr 4fr 4fr;
 }
 
 .demo {
+	position: relative;
 	display: grid;
 	place-items: center;
-	height: 170px;
+	height: auto;
 	grid-template-rows: 1fr auto;
 	flex-direction: column;
 	border: 1px solid #000000b3;
 	width: auto;
+}
+
+.demo p {
+	margin-top: 50px;
+}
+
+.download {
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 30px;
+	height: auto;
 }
 
 #audio .play {
@@ -286,7 +303,6 @@ video {
 
 #demoreelstext {
 	scroll-margin-top: 100px;
-	margin-top: 100px;
 }
 
 #requestaudio {
@@ -306,11 +322,12 @@ video {
 
 
 #happycustomers {
-	width: 80vw;
+	width: 100vw;
 	display: grid;
 	grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
 	grid-template-rows: 4fr 4fr 4fr 4fr;
 	place-items: center;
+	padding-bottom: 50px;
 }
 
 #happycustomerstext{
