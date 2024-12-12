@@ -1,3 +1,10 @@
+// menu burger
+
+const inmenu = document.getElementById('inmenu')
+window.addEventListener('click', () => {
+	inmenu.style.display = "none"
+})
+
 // loading screen
 const loadingpage = () => {	
 	const loading = document.getElementById("loading");

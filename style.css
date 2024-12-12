@@ -22,10 +22,10 @@ body {
 	color: black;
 }
 
-*:hover #nav #menu div {
+/**:hover #nav #menu div {
 	display: none;
 }
-
+*/
 .holder {
 	margin-bottom: 25px;
 	margin-top: 25px;
