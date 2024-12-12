@@ -22,10 +22,6 @@ body {
 	color: black;
 }
 
-/**:hover #nav #menu div {
-	display: none;
-}
-*/
 .holder {
 	margin-bottom: 25px;
 	margin-top: 25px;
@@ -191,7 +187,15 @@ a:hover {
 #menu:hover div {
 	font-size: 120%;
 	text-align: center;
-	display: block !important;
+	display: block;
+	background: #9fffff;
+	width: 110px;
+}
+
+#menu:focus-within div {
+	font-size: 120%;
+	text-align: center;
+	display: block;
 	background: #9fffff;
 	width: 110px;
 }
@@ -444,6 +448,7 @@ video {
 		margin-top: 30%;
 	}
 }
+
 
 
 
