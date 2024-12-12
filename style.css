@@ -22,7 +22,7 @@ body {
 	color: black;
 }
 
-body:hover #inmenu {
+body:hover #nav #menu div {
 	display: none;
 }
 
@@ -35,6 +35,7 @@ body:hover #inmenu {
 }
 
 h1 {
+	margin-left: 5%;
 	letter-spacing: -1px;
 }
 
@@ -190,7 +191,7 @@ a:hover {
 #menu:hover div {
 	font-size: 120%;
 	text-align: center;
-	display: block;
+	display: block !important;
 	background: #9fffff;
 	width: 110px;
 }
@@ -443,7 +444,6 @@ video {
 		margin-top: 30%;
 	}
 }
-
 
 
 
