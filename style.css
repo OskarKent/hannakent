@@ -22,7 +22,7 @@ body {
 	color: black;
 }
 
-body:hover #nav #menu div {
+*:hover #nav #menu div {
 	display: none;
 }
 
