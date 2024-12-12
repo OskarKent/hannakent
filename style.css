@@ -249,6 +249,11 @@ video {
 	justify-content: center;
 }
 
+.label {
+	max-width: 20vw;
+	word-wrap: break-word;
+}
+
 #frames video {
 	width: 20vw;
 	margin: 5px;
