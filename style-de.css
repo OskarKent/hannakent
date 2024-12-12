@@ -406,6 +406,7 @@ video {
 
 @media screen and (max-width: 745px) {
 	h1 {
+		max-width: 70px;
 		font-size: 90%;
 	}
 }

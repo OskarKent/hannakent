@@ -215,7 +215,7 @@ a:hover {
 }
 
 #contact p {
-	margin-top: 30%;
+	margin-top: 2.5vw;
 	text-align: center;
 }
 
@@ -420,6 +420,9 @@ video {
 @media screen and (max-width: 414px) {
 	#menu {
 		right: 0.1%;
+	}
+	#contact p {
+		margin-top: 4vw;
 	}
 }
 
