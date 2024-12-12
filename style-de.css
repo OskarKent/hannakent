@@ -393,6 +393,12 @@ video {
 	}
 }
 
+@media screen and (max-width: 414px) {
+	#menu {
+		right: 0.1%;
+	}
+}
+
 @media screen and (max-width: 400px) {
 	h3 {
 		font-size: 100%;
