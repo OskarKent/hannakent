@@ -22,6 +22,10 @@ body {
 	color: black;
 }
 
+body:hover #inmenu {
+	display: none;
+}
+
 .holder {
 	margin-bottom: 25px;
 	margin-top: 25px;
@@ -154,7 +158,8 @@ a:hover {
 }
 
 #nav h1 {
-	text-align: left;
+	margin-left: 5%;
+	text-align: center;
 }
 
 #menu {
@@ -241,7 +246,7 @@ video {
 
 #frames video {
 	width: 20vw;
-	margin: 10px;
+	margin: 5px;
 	cursor: pointer;
 }
 
@@ -277,11 +282,12 @@ video {
 }
 
 #audio h3 {
-	font-size: 90%;
+	font-size: 120%;
 }
 
 #audio .download {
-	width: 75px;
+	text-align: center;
+	width: 80px;
 	height: 10vw;
 	max-height: 50px;
 	font-size: 80%;
@@ -357,7 +363,7 @@ video {
 
 #studioinfo p {
 	text-align: center;
-	font-size: 100%;
+	font-size: 80%;
 }
 
 #studioinfotext {
@@ -401,16 +407,6 @@ video {
 	}
 }
 
-@media screen and (max-width: 768px) {
-	#menu:focus div {
-		font-size: 120%;
-		text-align: center;
-		display: block;
-		background: #9fffff;
-		width: 110px;
-	}
-}
-
 @media screen and (max-width: 400px) {
 	h3 {
 		font-size: 100%;
@@ -425,7 +421,7 @@ video {
 
 @media screen and (max-width: 333px) {
 	#audio h3 {
-		font-size: 50%;
+		font-size: 90%;
 	}
 }
 

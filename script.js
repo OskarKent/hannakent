@@ -16,7 +16,6 @@ const videoeffects = () => {
 
 	// makes options videos look better
 	const changeTime = () => {
-		main.currentTime += 0.1;
 		frame[0].currentTime += 10.5;
 		frame[1].currentTime += 0.1
 		frame[2].currentTime += 0.1;
@@ -43,6 +42,7 @@ const videoeffects = () => {
 			}
 		)
 		main.play();
+		frame.currentTime += 0.1
 		label[num].textContent = frame.title
 	}
 

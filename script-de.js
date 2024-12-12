@@ -42,6 +42,7 @@ const videoeffects = () => {
 			}
 		)
 		main.play();
+		frame.currentTime += 0.1
 		label[num].textContent = frame.title
 	}
 
