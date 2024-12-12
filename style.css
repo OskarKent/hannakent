@@ -162,7 +162,7 @@ a:hover {
 #menu {
 	position: absolute;
 	top: 30%;
-	right: 1%;
+	right: 2%;
 	height: 50px;
 }
 
@@ -409,6 +409,12 @@ video {
 	}
 	100% {
 		transform: rotateX(360deg) rotateY(-360deg);
+	}
+}
+
+@media screen and (max-width: 414px) {
+	#menu {
+		right: 0.1%;
 	}
 }
 
