@@ -44,7 +44,7 @@ p {
 }
 
 a {
-	color: blue;
+	color: #1b7ca4;
 	text-decoration: none;
 }
 
@@ -213,7 +213,6 @@ a:hover {
 	font-size: 150%;
 	display: flex;
 	justify-content: center;
-	
 	vertical-align: middle;
 }
 
@@ -338,8 +337,8 @@ video {
 }
 
 #requestaudio:hover{
-	border: 1px solid blue;
-	color: blue;
+	border: 1px solid #1b7ca4;
+	color: #1b7ca4;
 }
 
 
