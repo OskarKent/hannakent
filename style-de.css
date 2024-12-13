@@ -43,7 +43,7 @@ p {
 }
 
 a {
-	color: blue;
+	color: #1b7ca4;
 	text-decoration: none;
 }
 
@@ -315,8 +315,8 @@ video {
 }
 
 #requestaudio:hover{
-	border: 1px solid blue;
-	color: blue;
+	border: 1px solid #1b7ca4;
+	color: #1b7ca4;
 }
 
 
