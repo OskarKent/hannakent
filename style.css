@@ -216,6 +216,10 @@ a:hover {
 	vertical-align: middle;
 }
 
+#contact p {
+	margin-top: 25%;
+}
+
 #contact p:hover {
 	text-decoration: underline;
 }
