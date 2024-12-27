@@ -1,0 +1,6 @@
+const language = navigator.language || navigator.userLanguage;
+
+if (language.includes('de') && !sessionStorage.getItem("redirected")) {
+	window.location.replace('de.html')
+	sessionStorage.setItem("redirected", "true");
+}
