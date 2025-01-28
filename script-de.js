@@ -70,25 +70,31 @@ videoeffects()
 
 // for audio
 
-const audio = document.querySelectorAll("audio")
-const button = document.querySelectorAll(".play")
+const playbuttons = document.querySelectorAll('.play');
+const audios = document.querySelectorAll('audio');
 
-let playing = false
+let currentPlayingButton = null;
+let currentAudioPlaying = null;
 
-button.forEach((image, index) => {
-	image.addEventListener("click", () => {
-		if (playing === false) {			
-			audio[index].play()
-			image.src = "../media/image/pause-button.png"
-			playing = true
-		} else if (playing === true) {
-			audio[index].pause()
-			image.src = "../media/image/play-button.png"
-			playing = false
+playbuttons.forEach((button, index) => {
+	button.addEventListener('click', () => {
+		const audio = audios[index];
+		if (currentAudioPlaying === audio) {
+			audio.pause();
+			button.src = 'media/image/play-button.png';
+			currentAudioPlaying === null;
+		} else {
+			if (currentAudioPlaying) {
+				currentAudioPlaying.pause();
+				currentPlayingButton.src = 'media/image/play-button.png';
+			}
+			audio.play();
+			button.src = 'media/image/pause-button.png';
+			currentAudioPlaying = audio;
+			currentPlayingButton = button;
 		}
 	})
 })
-
 
 
 

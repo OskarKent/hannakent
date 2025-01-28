@@ -70,32 +70,33 @@ videoeffects()
 
 // for audio
 
-const pausebutton = document.querySelectorAll('.play');
-const audio0 = document.getElementById('audio0');
-const audio1 = document.getElementById('audio1');
-let playing = false
+const playbuttons = document.querySelectorAll('.play');
+const audios = document.querySelectorAll('audio');
 
-const playAudio = (audio, button) => {
-	if (playing === false) {		
-		audio.play()
-		button.src = "media/image/pause-button.png"
-		playing = true
-	} else if (playing === true) {
-		audio.pause()
-		button.src = "media/image/play-button.png"
-		playing = false
-	} else {
-		console.log('eroooooooor! fix it! fix it!')
-	}
-}
+let currentPlayingButton = null;
+let currentAudioPlaying = null;
 
-pausebutton[0].addEventListener("click", () => {
-	playAudio(audio0, pausebutton[0]);
+playbuttons.forEach((button, index) => {
+	button.addEventListener('click', () => {
+		const audio = audios[index];
+		if (currentAudioPlaying === audio) {
+			audio.pause();
+			button.src = 'media/image/play-button.png';
+			currentAudioPlaying === null;
+		} else {
+			if (currentAudioPlaying) {
+				currentAudioPlaying.pause();
+				currentPlayingButton.src = 'media/image/play-button.png';
+			}
+			audio.play();
+			button.src = 'media/image/pause-button.png';
+			currentAudioPlaying = audio;
+			currentPlayingButton = button;
+		}
+	})
 })
 
-pausebutton[1].addEventListener("click", () => {
-	playAudio(audio1, pausebutton[1]);
-})
+
 
 
 
