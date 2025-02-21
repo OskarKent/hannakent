@@ -181,7 +181,11 @@ a:hover {
 	position: absolute;
 	top: 30px;
 	right: 0px;
+	font-size: 120%;
+	text-align: center;
 	display: none;
+	background: #9fffff;
+	width: 110px;
 }
 
 #menu:hover div {
@@ -436,6 +440,11 @@ video {
 	}
 }
 
+@media screen and (min-width: 1024px) {
+	#menu:hover div {
+		display: block;
+	}
+}
 
 
 

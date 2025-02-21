@@ -8,6 +8,30 @@ const loadingpage = () => {
 	})
 }
 
+// for menu burger
+
+let closed = true;
+const menu = document.getElementById('menu');
+
+menu.addEventListener('click', () => {
+		if (window.innerWidth < 1024) {		
+			if (closed === true) {
+				closed = false;
+				menu.children[1].style.display = 'block';
+				menu.children[0].src = 'media/image/close.svg';
+				menu.children[0].style.width = '75%'
+				menu.children[0].style.height = '75%'
+			} else {
+				closed = true;
+				menu.children[1].style.display = 'none';
+				menu.children[0].src = 'media/image/menu.svg';
+				menu.children[0].style.width = '60%'
+				menu.children[0].style.height = '60%'
+			}
+		}
+	}
+)
+
 // for videos
 const videoeffects = () => {	
 	const main = document.getElementById('main');
@@ -17,7 +41,7 @@ const videoeffects = () => {
 	// makes options videos look better
 	const changeTime = () => {
 		frame[0].currentTime += 10.5;
-		frame[1].currentTime += 0.1
+		frame[1].currentTime += 0.1;
 		frame[2].currentTime += 0.1;
 		frame[3].currentTime += 12;
 		main.currentTime += 0.1;
@@ -73,25 +97,34 @@ videoeffects()
 const playbuttons = document.querySelectorAll('.play');
 const audios = document.querySelectorAll('audio');
 
-let currentPlayingButton = null;
-let currentAudioPlaying = null;
+let currentAudio = null;
+let currentButton = null;
 
 playbuttons.forEach((button, index) => {
 	button.addEventListener('click', () => {
-		const audio = audios[index];
-		if (currentAudioPlaying === audio) {
-			audio.pause();
+		// pausing it
+		if (!audios[index].paused) {
+    		audios[index].pause();
+			currentAudio = null;
 			button.src = 'media/image/play-button.png';
-			currentAudioPlaying === null;
+			button.alt = 'Play-Taste'
+			button.title = 'Play-Taste'
 		} else {
-			if (currentAudioPlaying) {
-				currentAudioPlaying.pause();
-				currentPlayingButton.src = 'media/image/play-button.png';
+			// playing it
+			if (currentButton && currentButton !== button) {
+				currentButton.src = 'media/image/play-button.png';
+				currentButton.alt = 'Play-Taste';
+				currentButton.title = 'Play-Taste';
 			}
-			audio.play();
+			if (currentAudio) {
+				currentAudio.pause()
+			}
+			currentButton = button;
+			audios[index].play();
+			currentAudio = audios[index];
 			button.src = 'media/image/pause-button.png';
-			currentAudioPlaying = audio;
-			currentPlayingButton = button;
+			button.alt = 'Pause-Taste';
+			button.title = 'Pause-Taste';
 		}
 	})
 })

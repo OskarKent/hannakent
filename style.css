@@ -183,21 +183,9 @@ a:hover {
 	position: absolute;
 	top: 30px;
 	right: 0px;
+	font-size: 120%;
+	text-align: center;
 	display: none;
-}
-
-#menu:hover div {
-	font-size: 120%;
-	text-align: center;
-	display: block;
-	background: #9fffff;
-	width: 110px;
-}
-
-#menu:focus-within div {
-	font-size: 120%;
-	text-align: center;
-	display: block;
 	background: #9fffff;
 	width: 110px;
 }
@@ -462,7 +450,11 @@ video {
 	}
 }
 
-
+@media screen and (min-width: 1024px) {
+	#menu:hover div {
+		display: block;
+	}
+}
 
 
 
