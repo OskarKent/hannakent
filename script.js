@@ -1,4 +1,101 @@
-const loadingpage=()=>{const loading=document.getElementById("loading");window.addEventListener("load",()=>{loaded=!0;loading.style.display="none"})};let closed=!0;const menu=document.getElementById("menu");menu.addEventListener("click",()=>{if(window.innerWidth<1024){if(closed===!0){closed=!1;menu.children[1].style.display="block";menu.children[0].src="media/image/close.svg";menu.children[0].style.width="75%";menu.children[0].style.height="75%"}else{closed=!0;menu.children[1].style.display="none";menu.children[0].src="media/image/menu.svg";menu.children[0].style.width="60%";menu.children[0].style.height="60%"}}});const videoeffects=()=>{const main=document.getElementById("main");const frame=document.querySelectorAll(".frame");const label=document.querySelectorAll(".label");const changeTime=()=>{frame[0].currentTime+=10.5;frame[1].currentTime+=0.1;frame[2].currentTime+=0.1;frame[3].currentTime+=12;main.currentTime+=0.1};const bigger=(src,frame,num)=>{let t1=frame.title;let t2=main.title;main.title=t1;frame.title=t2;frame.src=main.src;main.src=src;main.animate([{width:"0px"},{width:"70vw"}],{duration:500,iterations:1});main.play();frame.currentTime+=0.1;label[num].textContent=frame.title};frame[0].addEventListener("click",()=>{bigger(frame[0].src,frame[0],0)});frame[1].addEventListener("click",()=>{bigger(frame[1].src,frame[1],1)});frame[2].addEventListener("click",()=>{bigger(frame[2].src,frame[2],2)});frame[3].addEventListener("click",()=>{bigger(frame[3].src,frame[3],3)});changeTime()};loadingpage();videoeffects();const playbuttons=document.querySelectorAll(".play");const audios=document.querySelectorAll("audio");let currentAudio=null;let currentButton=null;playbuttons.forEach((button,index)=>{audios[index].addEventListener('ended',()=>{audios[index].currentTime=0;audios[index].pause();currentAudio=null;button.src="media/image/play-button.png";button.alt="Play-Taste";button.title="Play-Taste"})
-button.addEventListener("click",()=>{if(!audios[index].paused){audios[index].pause();currentAudio=null;button.src="media/image/play-button.png";button.alt="Play-Taste";button.title="Play-Taste"}else{if(currentButton&&currentButton!==button){currentButton.src="media/image/play-button.png";currentButton.alt="Play-Taste";currentButton.title="Play-Taste"}
-if(currentAudio){currentAudio.pause()}
-currentButton=button;audios[index].play();currentAudio=audios[index];button.src="media/image/pause-button.png";button.alt="Pause-Taste";button.title="Pause-Taste"}})})
+const loadingpage = () => {
+	const loading = document.getElementById("loading");
+	window.addEventListener("load", () => {
+		loaded = !0;
+		loading.style.display = "none";
+	});
+};
+let closed = !0;
+const menu = document.getElementById("menu");
+menu.addEventListener("click", () => {
+	if (window.innerWidth < 1024) {
+		if (closed === !0) {
+			closed = !1;
+			menu.children[1].style.display = "block";
+			menu.children[0].src = "media/image/close.svg";
+			menu.children[0].style.width = "75%";
+			menu.children[0].style.height = "75%";
+		} else {
+			closed = !0;
+			menu.children[1].style.display = "none";
+			menu.children[0].src = "media/image/menu.svg";
+			menu.children[0].style.width = "60%";
+			menu.children[0].style.height = "60%";
+		}
+	}
+});
+const videoeffects = () => {
+	const main = document.getElementById("main");
+	const frame = document.querySelectorAll(".frame");
+	const label = document.querySelectorAll(".label");
+	main.currentTime += 0.1;
+	const bigger = (src, frame, num) => {
+		let t1 = frame.title;
+		let t2 = main.title;
+		let ogmainimgsrc = main.dataset.imgsrc;
+		let ogframesrc = frame.src;
+		main.title = t1;
+		frame.title = t2;
+		frame.src = ogmainimgsrc;
+		main.dataset.imgsrc = ogframesrc;
+		frame.dataset.videosrc = main.src;
+		main.src = src;
+		main.animate([{ width: "0px" }, { width: "70vw" }], { duration: 500, iterations: 1 });
+		main.play();
+		frame.currentTime += 0.1;
+		label[num].textContent = frame.title;
+		console.log('main image src:', main.dataset.imgsrc, 'main src:', main.src)
+	};
+	frame[0].addEventListener("click", () => {
+		bigger(frame[0].dataset.videosrc, frame[0], 0);
+	});
+	frame[1].addEventListener("click", () => {
+		bigger(frame[1].dataset.videosrc, frame[1], 1);
+	});
+	frame[2].addEventListener("click", () => {
+		bigger(frame[2].dataset.videosrc, frame[2], 2);
+	});
+	frame[3].addEventListener("click", () => {
+		bigger(frame[3].dataset.videosrc, frame[3], 3);
+	});
+};
+loadingpage();
+videoeffects();
+const playbuttons = document.querySelectorAll(".play");
+const audios = document.querySelectorAll("audio");
+let currentAudio = null;
+let currentButton = null;
+playbuttons.forEach((button, index) => {
+	audios[index].addEventListener("ended", () => {
+		audios[index].currentTime = 0;
+		audios[index].pause();
+		currentAudio = null;
+		button.src = "media/image/play-button.png";
+		button.alt = "Play-Taste";
+		button.title = "Play-Taste";
+	});
+	button.addEventListener("click", () => {
+		if (!audios[index].paused) {
+			audios[index].pause();
+			currentAudio = null;
+			button.src = "media/image/play-button.png";
+			button.alt = "Play-Taste";
+			button.title = "Play-Taste";
+		} else {
+			if (currentButton && currentButton !== button) {
+				currentButton.src = "media/image/play-button.png";
+				currentButton.alt = "Play-Taste";
+				currentButton.title = "Play-Taste";
+			}
+			if (currentAudio) {
+				currentAudio.pause();
+			}
+			currentButton = button;
+			audios[index].play();
+			currentAudio = audios[index];
+			button.src = "media/image/pause-button.png";
+			button.alt = "Pause-Taste";
+			button.title = "Pause-Taste";
+		}
+	});
+});
