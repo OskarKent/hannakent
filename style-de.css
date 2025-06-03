@@ -210,12 +210,12 @@ video {
     display: flex;
     justify-content: center;
 }
-#frames video {
+#frames img {
     width: 20vw;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 }
-#frames video:hover {
+#frames img:hover {
     -webkit-box-shadow: 0 0 5px blue;
     -moz-box-shadow: 0 0 5px blue;
     -ms-box-shadow: 0 0 5px blue;
