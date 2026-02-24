@@ -1,3 +1,4 @@
+const playbuttons = document.querySelectorAll(".play");
 const loadingpage = () => {
     const loading = document.getElementById("loading");
     window.addEventListener("load", () => {
@@ -12,14 +13,21 @@ menu.addEventListener("click", () => {
         if (closed === !0) {
             closed = !1;
             menu.children[1].style.display = "block";
-            menu.children[0].src = "media/image/close.svg";
+            if (playbuttons.length < 3) {
+                menu.children[0].src = "media/image/close.svg";
+            } else {
+                menu.children[0].src = "../media/image/close.svg";
+            }
             menu.children[0].style.width = "75%";
             menu.children[0].style.height = "75%";
         } else {
             closed = !0;
             menu.children[1].style.display = "none";
-            menu.children[0].src = "media/image/menu.svg";
-            menu.children[0].style.width = "60%";
+            if (playbuttons.length < 3) {
+                menu.children[0].src = "media/image/menu.svg";
+            } else {
+                menu.children[0].src = "../media/image/menu.svg";
+            }            menu.children[0].style.width = "60%";
             menu.children[0].style.height = "60%";
         }
     }
@@ -54,7 +62,6 @@ const videoeffects = () => {
 };
 loadingpage();
 videoeffects();
-const playbuttons = document.querySelectorAll(".play");
 const audios = document.querySelectorAll("audio");
 let currentAudio = null;
 let currentButton = null;
@@ -75,7 +82,11 @@ playbuttons.forEach((button, index) => {
         if (!audios[index].paused) {
             audios[index].pause();
             currentAudio = null;
-            button.src = "media/image/play-button.png";
+            if (playbuttons.length < 3) {
+                button.src = "media/image/play-button.png";
+            } else {
+                button.src = "../media/image/play-button.png"
+            }            
             button.alt = "Play-Taste";
             button.title = "Play-Taste";
         } else {
@@ -94,7 +105,11 @@ playbuttons.forEach((button, index) => {
             currentButton = button;
             audios[index].play();
             currentAudio = audios[index];
-            button.src = "media/image/pause-button.png";
+            if (playbuttons.length < 3) {
+                button.src = "media/image/pause-button.png";
+            } else {
+                button.src = "../media/image/pause-button.png"
+            }            
             button.alt = "Pause-Taste";
             button.title = "Pause-Taste";
         }
