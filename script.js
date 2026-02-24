@@ -63,7 +63,11 @@ playbuttons.forEach((button, index) => {
         audios[index].currentTime = 0;
         audios[index].pause();
         currentAudio = null;
-        button.src = "media/image/play-button.png";
+        if (playbuttons.length < 3) {
+            button.src = "media/image/play-button.png";
+        } else {
+            button.src = "../media/image/play-button.png"
+        }
         button.alt = "Play-Taste";
         button.title = "Play-Taste";
     });
@@ -76,7 +80,11 @@ playbuttons.forEach((button, index) => {
             button.title = "Play-Taste";
         } else {
             if (currentButton && currentButton !== button) {
-                currentButton.src = "media/image/play-button.png";
+                if (playbuttons.length < 3) {
+                    currentButton.src = "media/image/play-button.png";
+                } else {
+                    currentButton.src = "../media/image/play-button.png";
+                }
                 currentButton.alt = "Play-Taste";
                 currentButton.title = "Play-Taste";
             }
